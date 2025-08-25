@@ -28,26 +28,26 @@ jobs:
               ubuntu
               24.04
               noble
-          - name: ubuntu-24.04-arm64
-            context: ubuntu/24.04
-            platforms: linux/arm64
-            tags: |
-              ubuntu
-              24.04
-              noble
-          - name: alpine-3.22-amd64
-            context: alpine/3.22
-            platforms: linux/amd64
-            tags: |
-              alpine
-              3.22
-          - name: alpine-3.22-arm64
-            context: alpine/3.22
-            platforms: linux/arm64
-            tags: |
-              alpine
-              3.22
-          #VERSIONS
+        #   - name: ubuntu-24.04-arm64
+        #     context: ubuntu/24.04
+        #     platforms: linux/arm64
+        #     tags: |
+        #       ubuntu
+        #       24.04
+        #       noble
+        #   - name: alpine-3.22-amd64
+        #     context: alpine/3.22
+        #     platforms: linux/amd64
+        #     tags: |
+        #       alpine
+        #       3.22
+        #   - name: alpine-3.22-arm64
+        #     context: alpine/3.22
+        #     platforms: linux/arm64
+        #     tags: |
+        #       alpine
+        #       3.22
+        #VERSIONS
     name: ${{ matrix.name }}
     steps:
       - name: Checkout repository
