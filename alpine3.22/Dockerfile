@@ -5,7 +5,9 @@ LABEL org.opencontainers.image.source=https://github.com/OxydeCloud/Loader
 RUN apk add --no-cache \
         ca-certificates \
         gcc \
-        musl-dev
+        musl-dev \
+        openssl \
+        perl
 
 ENV RUSTUP_HOME=/usr/local/rustup \
     CARGO_HOME=/usr/local/cargo \
