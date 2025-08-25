@@ -4,7 +4,8 @@ LABEL org.opencontainers.image.source=https://github.com/OxydeCloud/Loader
 
 RUN apk add --no-cache \
         ca-certificates \
-        gcc
+        gcc \
+        musl-dev
 
 ENV RUSTUP_HOME=/usr/local/rustup \
     CARGO_HOME=/usr/local/cargo \
@@ -30,4 +31,4 @@ RUN set -eux; \
     cargo --version; \
     rustc --version; \
     rustup target add wasm32-unknown-unknown; \
-    LEPTOS_BIN_TARGET_TRIPLE="x86_64-unknown-linux-musl" cargo install cargo-leptos --locked
+    cargo install cargo-leptos --locked
