@@ -30,4 +30,4 @@ RUN set -eux; \
     cargo --version; \
     rustc --version; \
     rustup target add wasm32-unknown-unknown; \
-    cargo install cargo-leptos --locked
+    LEPTOS_BIN_TARGET_TRIPLE="x86_64-unknown-linux-musl" cargo install cargo-leptos --locked
