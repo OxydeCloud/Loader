@@ -21,16 +21,26 @@ jobs:
       matrix:
         include:
           #VERSIONS
-          - name: trixie
-            context: trixie
+          - name: ubuntu-24.04
+            context: ubuntu/24.04
             platforms: linux/amd64,linux/arm64
             tags: |
+              ubuntu
+              24.04
+              noble
+          - name: debian-13
+            context: debian/13
+            platforms: linux/amd64,linux/arm64
+            tags: |
+              debian
+              13
               trixie
-          - name: alpine3.22
-            context: alpine3.22
+          - name: alpine-3.22
+            context: alpine/3.22
             platforms: linux/amd64,linux/arm64
             tags: |
-              alpine3.22
+              alpine
+              3.22
           #VERSIONS
     name: ${{ matrix.name }}
     steps:
